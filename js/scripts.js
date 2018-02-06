@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded',function(event){
 /*balleffects*/
 // Some random colors
   console.log("here!");
-const colors = ["#F61067", "#00F0B5", "#F46036", "#D8CBC7", "#6A2D8C","#FABC3C"];
+const colors = ["#292e4f", "#ce6767", "white", "#f3b5b5", "#262d50","#FABC3C"];
 
 const numBalls = 70;
 const balls = [];
@@ -14,7 +14,7 @@ for (let i = 0; i < numBalls; i++) {
   ball.style.left = `${Math.floor(Math.random() * 100)}vw`;
   ball.style.top = `${Math.floor(Math.random() * 100)}vh`;
   ball.style.transform = `scale(${Math.random()})`;
-  ball.style.width = `${2*Math.random()}em`;
+  ball.style.width = `${2.5*Math.random()}em`;
   ball.style.height = ball.style.width;
   
   balls.push(ball);
@@ -24,8 +24,8 @@ for (let i = 0; i < numBalls; i++) {
 // Keyframes
 balls.forEach((el, i, ra) => {
   let to = {
-    x: Math.random() * (i % 2 === 0 ? -11 : 11),
-    y: Math.random() * 12
+    x: Math.random() * (i % 2 === 0 ? -20 : 20),
+    y: Math.random() * 20
   };
 
   let anim = el.animate(

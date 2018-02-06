@@ -92,15 +92,15 @@ span {
 }
 .enterbutton{
   font-size:2em;
-  font-family: 'Quicksand', sans-serif;
-  color:#9462DB;
+  font-family: 'Acre-Regular', sans-serif;
+  color:#292e4f;
   background-color:transparent;
   text-transform: uppercase;
-  border-color:#9462DB;
+  border-color:#292e4f;
   border-width:3px;
   padding: 7px;
   border-radius:5PX;
-  margin-right:100px;
+  margin-right:150px;
 }
 
 
@@ -115,6 +115,7 @@ button{
   border-radius:5PX;
 }
 
+
 .ball {
   position: absolute;
   border-radius: 100%;
@@ -126,3 +127,15 @@ button{
 .nav-link:hover{
   color:#ce6767;
 }
+.ogr{
+  border-radius:50%;
+  display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    /*height: 30px; */
+}
+
+#images{
+   text-align:center;
+}
+
