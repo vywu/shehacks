@@ -47,10 +47,7 @@ h1 {
 h2 {
 }
 
-span {
-  border-right: .05em solid;
-  animation: caret 1s steps(1) infinite;
-}
+
 
 @keyframes caret {
   50% {
@@ -59,11 +56,17 @@ span {
 }
 
 #landing {
+
   margin: 0px;
   width: 100%;
   height:100%;
   overflow:hidden;
   position:relative;
+}
+
+#landing span {
+  border-right: .05em solid;
+  animation: caret 1s steps(1) infinite;
 }
 #landing-wrapper {
    height: 1086px;
@@ -132,10 +135,44 @@ button{
   display: inline-block;
     margin-left: auto;
     margin-right: auto;
-    /*height: 30px; */
+    /*height: px; */
 }
 
-#images{
+.pic{
    text-align:center;
 }
+.img {
+  display: inline-block;
+  flex: 0 0 150px;
+  height: 250px;
+  width: 250px;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  margin:30px;
 
+}
+.img img{
+  height:100%;
+
+}
+.img__overlay {
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: opacity 0.25s;
+  z-index: 1;
+  background-color: #ce6767;
+  /*background: linear-gradient(65deg, rgba(46,204,113,0.4), rgba(243,156,18,0.4));*/
+  color: #f3b5b5;
+  font-size: 24px;
+}
+.img__overlay:hover {
+  opacity: 1;
+}
