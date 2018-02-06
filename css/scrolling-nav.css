@@ -41,12 +41,10 @@ body {
 
 h1 {
   font-size: 5em;
-  color:#9462DB;
   text-transform: uppercase;
 }
 
 h2 {
-  color:#9462DB;
 }
 
 span {
@@ -109,11 +107,10 @@ span {
 button{
   font-size:1em;
   font-family: 'tradegothiclt-bold', sans-serif;
-  color:#9462DB;
   background-color:transparent;
   text-transform: uppercase;
-  border-color:#9462DB;
-  border-width:3px;
+  border-width:5px;
+  border-color: white;
   padding: 7px;
   border-radius:5PX;
 }
@@ -124,7 +121,7 @@ button{
   opacity: 0.7;
 }
 .nav-link{
-  color:white;
+  color:#ce6767;
 }
 .nav-link:hover{
   color:#ce6767;

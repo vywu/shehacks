@@ -15,7 +15,8 @@
 
     <!-- Custom styles for this template -->
     <link href="css/scrolling-nav.css" rel="stylesheet">
-    <link href="css/appform.css" rel="stylesheet">
+    <!-- <link href="css/appform.css" rel="stylesheet"> -->
+    <link href="css/timeline.css" rel="stylesheet">
     <script type='text/javascript' src='js/scripts.js'></script>
     <script type='text/javascript' src='js/ballsanimation.js'></script>
     <script type='text/javascript' src='js/modal.js'></script>
@@ -43,8 +44,8 @@
     <div class="mainPage" style="display:none">
 
     <nav class="navbar navbar-expand-lg fixed-top" style="height:80px;background-color:#f3b5b5;" id="mainNav" >
-      <div class="container" style="font-size:30px; color:white;">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="assets/logo.svg"></a>
+      <div class="container" style="font-size:30px; color:#ce6767;">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="assets/logo.png" style="height:40px"></a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -77,7 +78,7 @@
   <img src="assets/header_s.png" style="max-width:100%;
 margin-top:-80px;">
 <div style="text-align: center;"> 
-  <button style="background-color:#292e4f;color:white;border-radius:100%;height:130px;width:130px;margin-top:-100px;font-family:Acre-Regular;font-size:35px;">APPLY</button>
+  <button style="background-color:#292e4f;color:white;border-radius:100%;height:130px;width:130px;margin-top:-100px;font-family:Acre-Regular;font-size:35px">APPLY</button>
 <div>
 </header>
 
@@ -99,18 +100,104 @@ margin-top:-80px;">
       </div>
     </section>
 
-    <section id="schedule">
+    <section id="schedule" style="background-color:#292e4f";>
       <div class="container">
         <div class="row">
-          <div class="col-lg-8 mx-auto">
+          <div class="col-lg-8 mx-auto" style="color:#f3b5b5">
             <h2>Schedule</h2>
-            <p class="lead">This is a great place to talk about your webpage. This template is purposefully unstyled so you can use it as a boilerplate or starting point for you own landing page designs! This template features:</p>
-            <ul>
-              <li>Clickable nav links that smooth scroll to page sections</li>
-              <li>Responsive behavior when clicking nav links perfect for a one page website</li>
-              <li>Bootstrap's scrollspy feature which highlights which section of the page you're on in the navbar</li>
-              <li>Minimal custom CSS so you are free to explore your own unique design options</li>
-            </ul>
+            <!-- timeline:https://codepen.io/savalazic/pen/QKwERN -->
+
+    
+
+
+
+
+    <div class="timeline">
+    <ul>
+      <li>
+        <div class="bullet pink"></div>
+        <div class="time">9am</div>
+        <div class="desc">
+          <h3>Registration Starts</h3>
+          <h4>1 Hour // NCB Atrium</h4>
+        </div>
+      </li>
+      <li>
+        <div class="bullet green"></div>
+        <div class="time">9:30am</div>
+        <div class="desc">
+          <h3>Breakfast</h3>
+          <h4>30 Mins // NCB Atrium</h4>
+         
+        </div>
+      </li>
+      <li>
+        <div class="bullet orange"></div>
+        <div class="time">10am</div>
+        <div class="desc">
+          <h3>Opening Ceremonies &amp; Keynote Speech</h3>
+          <h4>1 Hour // NCB113</h4>
+        </div>
+      </li>
+      <li>
+        <div class="bullet green"></div>
+        <div class="time">11am</div>
+        <div class="desc">
+          <h3>Hacking Starts</h3>
+          <h4>10 Hours // NCB</h4>
+        </div>
+      </li>
+       <li>
+        <div class="bullet green"></div>
+        <div class="time">12pm</div>
+        <div class="desc">
+          <h3>Lunch</h3>
+          <h4>1 Hour // NCB Atrium</h4>
+        </div>
+      </li>
+      <li>
+        <div class="bullet green"></div>
+        <div class="time">15:25pm</div>
+        <div class="desc">
+          <h3>Snacks</h3>
+          <h4>45 Mins // NCB Atrium</h4>
+        </div>
+      </li>
+          <li>
+        <div class="bullet green"></div>
+        <div class="time">18:30pm</div>
+        <div class="desc">
+          <h3>Dinner</h3>
+          <h4>1 Hour // NCB Atrium</h4>
+        </div>
+      </li>
+          <li>
+        <div class="bullet green"></div>
+        <div class="time">9pm</div>
+        <div class="desc">
+          <h3>Hacking ends</h3>
+        </div>
+      </li>
+      <li>
+        <div class="bullet green"></div>
+        <div class="time">9:15pm</div>
+        <div class="desc">
+          <h3>Demo</h3>
+          <h4>30 Mins // NCB Atrium</h4>
+        </div>
+      </li>
+      <li>
+        <div class="bullet green"></div>
+        <div class="time">9:40pm</div>
+        <div class="desc">
+          <h3>Closing Ceremonies</h3>
+          <h4>40Mins // NCB 113</h4>
+        </div>
+      </li>
+    </ul>
+
+  </div>
+
           </div>
         </div>
       </div>
@@ -172,40 +259,11 @@ margin-top:-80px;">
 
     <!-- Custom JavaScript for this theme -->
     <script src="js/scrolling-nav.js"></script>
+    <script src="js/fade.js">
 
-    <script type="text/javascript">
-      function fadeNav(){  
-  var offset = getScrollXY();
-  //if y offset is greater than 0, set opacity to desired value, otherwise set to 1
-  offset[1] > 0 ? setNavOpacity(0.5) : setNavOpacity(1.0); 
-}
 
-function setNavOpacity(newOpacity){
-  var navBar = document.getElementById("mainNav");
-  navBar.style.backgroundColor = "transparent";
-}
-
-function getScrollXY() {
-  var scrOfX = 0, scrOfY = 0;
-if( typeof( window.pageYOffset ) == 'number' ) {
-  //Netscape compliant
-  scrOfY = window.pageYOffset;
-  scrOfX = window.pageXOffset;
-} else if( document.body && ( document.body.scrollLeft || document.body.scrollTop ) ) {
-  //DOM compliant
-  scrOfY = document.body.scrollTop;
-  scrOfX = document.body.scrollLeft;
-} else if( document.documentElement && ( document.documentElement.scrollLeft ||     
-  document.documentElement.scrollTop ) ) {
-  //IE6 standards compliant mode
-  scrOfY = document.documentElement.scrollTop;
-  scrOfX = document.documentElement.scrollLeft;
-}
-
-  return [ scrOfX, scrOfY ];
-}
-    window.onscroll = fadeNav;
-  </script>
+    </script>
+   
   </body>
 
 </html>
