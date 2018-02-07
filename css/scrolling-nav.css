@@ -190,3 +190,11 @@ button{
 #sponsors a{
   justify-content: center;
 }
+.footer-col {
+  text-align: center;
+}
+
+.row{
+  text-align: center;
+  justify-content: center;
+}
