@@ -8,9 +8,9 @@ function fadeNav(){
 }
 
 function setNavOpacity(newOpacity){
-  console.log(newOpacity);
+  // console.log(newOpacity);
   var navBar = document.getElementById("mainNav");
-  console.log("hit");
+  // console.log("hit");
   newOpacity==0.5? navBar.style.boxShadow="0 8px 6px -6px grey":navBar.style.boxShadow="0px 0px 0px grey";
  
 }

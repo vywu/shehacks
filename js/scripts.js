@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded',function(event){
 /*balleffects*/
 // Some random colors
-  console.log("here!");
+  // console.log("here!");
 const colors = ["#292e4f", "#ce6767", "white", "#f3b5b5", "#262d50","#FABC3C"];
 
 const numBalls = 70;
