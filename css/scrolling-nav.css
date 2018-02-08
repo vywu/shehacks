@@ -93,6 +93,7 @@ h2 {
 .enter{
  text-align: right;
 }
+
 .enterbutton{
   font-size:2em;
   font-family: 'Acre-Regular', sans-serif;
@@ -122,14 +123,58 @@ button{
 .ball {
   position: absolute;
   border-radius: 100%;
-  opacity: 0.7;
+  opacity: 1;
 }
 .nav-link{
   color:#ce6767;
+  position: relative;
+  display: inline-block;
+ text-decoration: none;
 }
-.nav-link:hover{
-  color:#ce6767;
+.nav-link::before{
+  display: inline-block;
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    overflow: hidden;
+
+    padding: 0;
+
+    max-width: 0;
+    max-height:30px;
+
+    color: #0000;
+
+    content: attr(data-hover);
+
+    -webkit-transition: max-width 0.5s;
+
+    -moz-transition: max-width 0.5s;
+
+    transition: max-width 0.5s;
+
 }
+/*.nav-link:hover{
+ color: #ffffff;
+}*/
+
+.nav-link:hover::before .nav-link:focus::before{
+  max-width: 100%;
+
+}
+/*.nav-link::after{
+    content: '';
+    display: block;
+    width: 0;
+    color:#292e4f;
+    height: 2px;
+    background: #000;
+    transition: width .3s;
+}*/
 .ogr{
   border-radius:50%;
   display: inline-block;
