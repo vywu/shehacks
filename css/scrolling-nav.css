@@ -69,18 +69,19 @@ h2 {
   animation: caret 1s steps(1) infinite;
 }
 #landing-wrapper {
-   height: 1086px;
+   height: 100%;
    width:100%;
    position: absolute;
    text-align: center;
 /*   background-color:#6a3b4e;*/
 }
 #landing-content {
-  margin-top:200px;
-
-
+  top:25%;
+  left:0%;
+  position:relative;
   height:50%;
-  width:100%;
+  width:auto;
+  vertical-align: center;
 }
 
 .animation {
@@ -100,11 +101,10 @@ h2 {
   color:#292e4f;
   background-color:transparent;
   text-transform: uppercase;
-  border-color:#292e4f;
-  border-width:3px;
+  
   padding: 7px;
   border-radius:5PX;
-  margin-right:150px;
+
 }
 
 
