@@ -7,8 +7,8 @@ const colors = ["#292e4f", "#ce6767", "white", "#f3b5b5", "#262d50","#FABC3C"];
 const numBalls = 70;
 const balls = [];
 
-for (let i = 0; i < numBalls; i++) {
-  let ball = document.createElement("div");
+for (var i = 0; i < numBalls; i++) {
+  var ball = document.createElement("div");
   ball.classList.add("ball");
   ball.style.background = colors[Math.floor(Math.random() * colors.length)];
   ball.style.left = `${Math.floor(Math.random() * 100)}vw`;
@@ -22,13 +22,37 @@ for (let i = 0; i < numBalls; i++) {
 }
 
 // Keyframes
-balls.forEach((el, i, ra) => {
-  let to = {
+// balls.forEach(function(el, i, ra){
+//   var to = {
+//     x: Math.random() * (i % 2 === 0 ? -20 : 20),
+//     y: Math.random() * 20
+//   };
+
+//   var anim = el.animate(
+//     [
+//       { transform: "translate(0, 0)" },
+//       { transform: `translate(${to.x}rem, ${to.y}rem)` }
+//     ],
+//     {
+//       duration: (Math.random() + 1) * 2000, // random duration
+//       direction: "alternate",
+//       fill: "both",
+//       iterations: Infinity,
+//       easing: "ease-in-out"
+//     }
+//   );
+// });
+
+
+//safari ur a waste lol
+for (var ball of balls) {
+  // console.log(ball);
+   var to = {
     x: Math.random() * (i % 2 === 0 ? -20 : 20),
     y: Math.random() * 20
   };
 
-  let anim = el.animate(
+  var anim = ball.animate(
     [
       { transform: "translate(0, 0)" },
       { transform: `translate(${to.x}rem, ${to.y}rem)` }
@@ -39,9 +63,8 @@ balls.forEach((el, i, ra) => {
       fill: "both",
       iterations: Infinity,
       easing: "ease-in-out"
-    }
-  );
-});
+    });
+}
 //update the balls after user clicked the enter button
 /*ballefect*/
 
