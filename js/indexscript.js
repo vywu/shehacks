@@ -87,16 +87,16 @@ balls.forEach((el, i, ra) => {
   }
 
   function fnCallback(){
-    console.log("called");
+    // console.log("called");
     
   }
   // start the text animation
   StartTextAnimation(0);
 });
 
-function hideLanding(){
-  console.log("lol");
-  document.querySelector("#landing").remove();
-  document.querySelector(".mainPage").style.display="inline";
+// function hideLanding(){
+//   console.log("lol");
+//   document.querySelector("#landing").remove();
+//   document.querySelector(".mainPage").style.display="inline";
 
-}
+// }
