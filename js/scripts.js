@@ -23,26 +23,7 @@ for (var i = 0; i < numBalls; i++) {
 }
 
 // Keyframes
-// balls.forEach(function(el, i, ra){
-//   var to = {
-//     x: Math.random() * (i % 2 === 0 ? -20 : 20),
-//     y: Math.random() * 20
-//   };
 
-//   var anim = el.animate(
-//     [
-//       { transform: "translate(0, 0)" },
-//       { transform: `translate(${to.x}rem, ${to.y}rem)` }
-//     ],
-//     {
-//       duration: (Math.random() + 1) * 2000, // random duration
-//       direction: "alternate",
-//       fill: "both",
-//       iterations: Infinity,
-//       easing: "ease-in-out"
-//     }
-//   );
-// });
 // function updateTransition() {
 //   var el = document.querySelector("div.box");
    
@@ -57,19 +38,60 @@ for (var i = 0; i < numBalls; i++) {
 // }
 
 // var intervalID = window.setInterval(updateTransition, 7000);
+function get_browser() {
+    var ua=navigator.userAgent,tem,M=ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || []; 
+    if(/trident/i.test(M[1])){
+        tem=/\brv[ :]+(\d+)/g.exec(ua) || []; 
+        return {name:'IE',version:(tem[1]||'')};
+        }   
+    if(M[1]==='Chrome'){
+        tem=ua.match(/\bOPR|Edge\/(\d+)/)
+        if(tem!=null)   {return {name:'Opera', version:tem[1]};}
+        }   
+    M=M[2]? [M[1], M[2]]: [navigator.appName, navigator.appVersion, '-?'];
+    if((tem=ua.match(/version\/(\d+)/i))!=null) {M.splice(1,1,tem[1]);}
+    return {
+      name: M[0],
+      version: M[1]
+    };
+ }
+ // console.log(get_browser());
+ if(get_browser().name=="Chrome")
+ {
+  balls.forEach(function(el, i, ra){
+  var to = {
+    x: Math.random() * (i % 2 === 0 ? -20 : 20),
+    y: Math.random() * 20
+  };
 
+  var anim = el.animate(
+    [
+      { transform: "translate(0, 0)" },
+      { transform: `translate(${to.x}rem, ${to.y}rem)` }
+    ],
+    {
+      duration: (Math.random() + 1) * 2000, // random duration
+      direction: "alternate",
+      fill: "both",
+      iterations: Infinity,
+      easing: "ease-in-out"
+    }
+  );
+});
+}
 
 //safari ur a waste lol
-setTimeout(function(){for (var ball of balls) {
-   var to = {
-    x: Math.random() * (i % 2 === 0 ? -20 : 20),
-    y: Math.random() * 20,
-    z: (Math.random()+1)*2000
-  };
-  ball.style.setProperty("-webkit-transform",`translate(${to.x}rem, ${to.y}rem)`);
-  ball.style.setProperty("transform",`translate(${to.x}rem, ${to.y}rem)`);
-  ball.style.setProperty("-webkit-transition",` -webkit-transform ${to.z}s ease-in-out;`);
-  ball.style.setProperty("transition",`transform ${to.z}s ease-in-out;`);
+// setTimeout(function(){
+//   for (var ball of balls) {
+//    var to = {
+//     x: Math.random() * (i % 2 === 0 ? -20 : 20),
+//     y: Math.random() * 20,
+//     z: (Math.random()+1)*2000
+//   };
+//   ball.style.setProperty("-webkit-transform",`translate(${to.x}rem, ${to.y}rem)`);
+//   ball.style.setProperty("transform",`translate(${to.x}rem, ${to.y}rem)`);
+//   ball.style.setProperty("-webkit-transition",` -webkit-transform ${to.z}s ease-in-out;`);
+//   ball.style.setProperty("transition",`transform ${to.z}s ease-in-out;`);
   // var anim = ball.animate(
   //   [
   //     { transform: "translate(0, 0)" },
@@ -82,7 +104,7 @@ setTimeout(function(){for (var ball of balls) {
   //     iterations: Infinity,
   //     easing: "ease-in-out"
   //   });
-}},3000);
+// }},3000);
 //update the balls after user clicked the enter button
 /*ballefect*/
 
