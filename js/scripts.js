@@ -16,6 +16,7 @@ for (var i = 0; i < numBalls; i++) {
   ball.style.transform = `scale(${Math.random()})`;
   ball.style.width = `${2.5*Math.random()}em`;
   ball.style.height = ball.style.width;
+  ball.style.transform=""
   
   balls.push(ball);
   document.getElementById("landing").append(ball);
@@ -42,29 +43,46 @@ for (var i = 0; i < numBalls; i++) {
 //     }
 //   );
 // });
+// function updateTransition() {
+//   var el = document.querySelector("div.box");
+   
+//   if (el) {
+//     el.className = "box1";
+//   } else {
+//     el = document.querySelector("div.box1");
+//     el.className = "box";
+//   }
+   
+//   return el;
+// }
+
+// var intervalID = window.setInterval(updateTransition, 7000);
 
 
 //safari ur a waste lol
-for (var ball of balls) {
-  // console.log(ball);
+setTimeout(function(){for (var ball of balls) {
    var to = {
     x: Math.random() * (i % 2 === 0 ? -20 : 20),
-    y: Math.random() * 20
+    y: Math.random() * 20,
+    z: (Math.random()+1)*2000
   };
-
-  var anim = ball.animate(
-    [
-      { transform: "translate(0, 0)" },
-      { transform: `translate(${to.x}rem, ${to.y}rem)` }
-    ],
-    {
-      duration: (Math.random() + 1) * 2000, // random duration
-      direction: "alternate",
-      fill: "both",
-      iterations: Infinity,
-      easing: "ease-in-out"
-    });
-}
+  ball.style.setProperty("-webkit-transform",`translate(${to.x}rem, ${to.y}rem)`);
+  ball.style.setProperty("transform",`translate(${to.x}rem, ${to.y}rem)`);
+  ball.style.setProperty("-webkit-transition",` -webkit-transform ${to.z}s ease-in-out;`);
+  ball.style.setProperty("transition",`transform ${to.z}s ease-in-out;`);
+  // var anim = ball.animate(
+  //   [
+  //     { transform: "translate(0, 0)" },
+  //     { transform: `translate(${to.x}rem, ${to.y}rem)` }
+  //   ],
+  //   {
+  //     duration: (Math.random() + 1) * 2000, // random duration
+  //     direction: "alternate",
+  //     fill: "both",
+  //     iterations: Infinity,
+  //     easing: "ease-in-out"
+  //   });
+}},3000);
 //update the balls after user clicked the enter button
 /*ballefect*/
 

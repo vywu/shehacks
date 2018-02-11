@@ -166,12 +166,20 @@ button{
   padding: 7px;
   border-radius:5PX;
 }
-
+#faq h3{
+  margin-top:30px;
+}
 
 .ball {
   position: absolute;
   border-radius: 100%;
   opacity: 1;
+/*  -webkit-transition-property:left top transform -webkit-transform color;
+  -webkit-transition-duration: 2s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-property: width height background-color font-size left top transform -webkit-transform color;
+  transition-duration: 2s;
+  transition-timing-function: ease-in-out;*/
 }
 .nav-link{
   color:#ce6767;
