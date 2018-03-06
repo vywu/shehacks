@@ -155,7 +155,9 @@ link:hover{
   cursor:pointer;
 }
 
-
+.mainPage{
+  overflow: hidden;
+}
 button{
   font-size:1em;
   font-family: 'tradegothiclt-bold', sans-serif;
