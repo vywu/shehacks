@@ -79,6 +79,24 @@ function get_browser() {
   );
 });
 }
+else
+{
+  setTimeout(function(){
+    balls.forEach(function(ball){
+    var to = {
+    x: Math.random() * (i % 2 === 0 ? -20 : 20),
+    y: Math.random() * 20
+    };
+      console.log("HERE");
+      ball.style.transform="translate(0,0)";
+      ball.style.webkitTransform="translate(0,0)";
+      console.log("AFTER");
+      ball.style.transform=`translate(${to.x}rem, ${to.y}rem)`;
+      ball.style.webkitTransform=`translate(${to.x}rem, ${to.y}rem)`;
+    }
+        
+  )},(Math.random()+1)*2000);
+}
 
 //safari ur a waste lol
 // setTimeout(function(){
