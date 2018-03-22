@@ -34,15 +34,15 @@
 }
 
 .timeline .bullet.pink {
-  border: 2px solid #F93B69;
+  border: 10px solid #f3b5b5;
 }
 
-.timeline .bullet.green {
-  border: 2px solid #B0E8E2;
+.timeline .bullet.white {
+  border: 10px solid white;
 }
 
 .timeline .bullet.orange {
-  border: 2px solid #EB8B6E;
+  border: 10px solid #ce6767;
 }
 
 .timeline .time {
